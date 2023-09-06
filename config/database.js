@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
-// "mongodb+srv://Adityaraj_007 :aditya007@clustername.mongodb.net/testing"
-
-const DB_URI="mongodb+srv://Adityaraj_007:aditya007@cluster0.8vtmh2l.mongodb.net/?retryWrites=true&w=majority";
+const DB_URI="mongodb://localhost:27017/ecommerceweb"
 async function connectToDb(){
    try{
     mongoose.connect(DB_URI,{

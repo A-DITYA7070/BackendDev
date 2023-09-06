@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 
 const app=express();
 
@@ -10,10 +11,13 @@ connectTODB();
 
 // using middlewaress.
 app.use(express.json());
+// app.use(cors);
 
-import taskRoutes from "./routes/taskRoutes.js";
+// implementing routes...
+import product from "./routes/productRoutes.js";
 
-app.use("/api/v1",taskRoutes);
+app.use("/api/v1",product);
+
 
 // configuring dotenv..
 dotenv.config({path:"./config/config.env"});
